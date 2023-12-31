@@ -87,7 +87,7 @@ Configure your graphics settings for optimal performance.
 
 ### AMD Driver Settings
 
-Refer to the provided image: [amd_driver_settings.png](https://github.com/kirilft/performance/blob/main/Performance/2Grafics/6Amd%20Driver%20Settings.png)
+Refer to the provided image: ![AMD Driver Settings](https://github.com/kirilft/performance/blob/main/Performance/2Grafics/6Amd%20Driver%20Settings.png)
 
 # 3. Networking
 
