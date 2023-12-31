@@ -1,0 +1,86 @@
+Windows Registry Editor Version 5.00
+
+; Disable power throttling
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling]
+"PowerThrottlingOff"=dword:00000001
+
+; Network throttling
+; System responsiveness
+ 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"NetworkThrottlingIndex"=dword:ffffffff
+"SystemResponsiveness"=dword:00000000
+
+; Games scheduling
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games]
+"Affinity"=dword:00000000
+"Background Only"="False"
+"Clock Rate"=dword:00002710
+"GPU Priority"=dword:00000008
+"Priority"=dword:00000006
+"Scheduling Category"="High"
+"SFIO Priority"="High"
+
+; Fix exclusive fullscreen
+
+[HKEY_CURRENT_USER\System\GameConfigStore]
+"GameDVR_FSEBehaviorMode"=dword:00000002
+"GameDVR_HonorUserFSEBehaviorMode"=dword:00000001
+"GameDVR_DXGIHonorFSEWindowsCompatible"=dword:00000001
+"GameDVR_EFSEFeatureFlags"=dword:00000000
+"GameDVR_FSEBehavior"=dword:00000002 
+
+; Edit CPU scheduling
+
+[Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
+"Win32PrioritySeparation"=dword:28
+
+;Disable Spectre Meltdown
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"FeatureSettingsOverride"=dword:00000003
+"FeatureSettingsOverrideMask"=dword:00000003
+
+; Disable game bar
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\ApplicationManagement\AllowGameDVR]
+"value"=dword:00000000
+
+; Disable hibernate 
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+"HibernateEnabled"=dword:00000000
+
+; Menu show delay
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"MenuShowDelay"="0"
+
+;Disable MMCSS
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MMCSS]
+"Start"=dword:00000004
+
+;Mouse Fix
+
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"MouseSensitivity"="10"
+"SmoothMouseXCurve"=hex:\
+	00,00,00,00,00,00,00,00,\
+	C0,CC,0C,00,00,00,00,00,\
+	80,99,19,00,00,00,00,00,\
+	40,66,26,00,00,00,00,00,\
+	00,33,33,00,00,00,00,00
+"SmoothMouseYCurve"=hex:\
+	00,00,00,00,00,00,00,00,\
+	00,00,38,00,00,00,00,00,\
+	00,00,70,00,00,00,00,00,\
+	00,00,A8,00,00,00,00,00,\
+	00,00,E0,00,00,00,00,00
+
+[HKEY_USERS\.DEFAULT\Control Panel\Mouse]
+"MouseSpeed"="0"
+"MouseThreshold1"="0"
+"MouseThreshold2"="0"
